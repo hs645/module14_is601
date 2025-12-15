@@ -1,0 +1,17 @@
+# =========================
+# Trivy Ignore File
+# Module 14 – Temporary CI exceptions
+# =========================
+
+# h11 – fixed upstream, blocked by dependency constraints
+CVE-2025-43859
+
+# python-jose – fixed in 3.4.0, upgrade pending
+CVE-2024-33663
+
+# starlette – DoS via Range header, fixed in 0.49.1
+CVE-2025-62727
+
+# urllib3 – multiple CVEs, fixed in >=2.6.0
+CVE-2025-66418
+CVE-2025-66471
