@@ -49,7 +49,7 @@ jobs:
       
       - name: Run tests
         env:
-          DATABASE_URL: DATABASE_URL: postgresql://user:password@postgres:5432/mytestdb
+          DATABASE_URL: postgresql://user:password@postgres:5432/mytestdb
         run: |
           source venv/bin/activate
           
