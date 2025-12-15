@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:latest
+        image: postgres:17
         env:
           POSTGRES_USER: user
           POSTGRES_PASSWORD: password
@@ -19,7 +19,7 @@ jobs:
         ports:
           - 5432:5432
         options: >-
-          --health-cmd pg_isready
+          --health-cmd pg_isready -U user -d mytestdb"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
@@ -49,7 +49,7 @@ jobs:
       
       - name: Run tests
         env:
-          DATABASE_URL: postgresql://user:password@postgres:5432/mytestdb
+          DATABASE_URL: postgresql://user:password@localhost:5432/mytestdb
         run: |
           source venv/bin/activate
           
