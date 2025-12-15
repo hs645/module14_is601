@@ -1,0 +1,27 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.coverage
+.pytest_cache
+htmlcov
+.env# Python virtualenv
+.venv/
+.venv*/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Playwright (optional)
+playwright-report/
+
+# Python virtualenv
+.venv/
+.venv*/
+venv/
+env/
+__pycache__/
+*.pyc
